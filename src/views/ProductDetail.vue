@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>Détails du Produit</h1>
-        <p>ID du Produit: XXXX </p>
+        <p>ID du Produit: {{ productId }}</p>
         <!-- Afficher plus de détails sur le produit ici -->
     </div>
 </template>
