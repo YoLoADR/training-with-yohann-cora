@@ -32,12 +32,18 @@ export default {
   props: {
     products: Array
   },
+  mounted() {
+    this.$store.dispatch('fetchProducts', false); // Mettez `true` pour utiliser les données mockées
+  },
   computed: {
     availableProducts() {
-      return this.products.filter(product => product.stock > 0);
+      //return this.products.filter(product => product.stock > 0);
+      return this.$store.getters.availableProducts;
     }
   }
 }
 </script>
 
-<style scoped>/* Styles spécifiques à ProductList ici */</style>
+<style scoped>
+/* Styles spécifiques à ProductList ici */
+</style>
